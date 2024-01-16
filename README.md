@@ -20,7 +20,7 @@ https://www.loom.com/share/fcdc9c2985b14bab82f05e55d83eecb7?sid=83412e99-f86f-4b
 Currently, compiled assets are not included and must be manually built.
 1. Clone this repository into `wp-content/plugins`
 2. Install composer dependencies with `composer install`
-3. Install NPM dependencies with `npm i` and build plugin using `npm run build`. Node 18+ recomended.
+3. Install NPM dependencies with `npm i` and build plugin using `npm run build`. Node 18+ recommended.
 4. Optional - This ships with @wordpress/env installed. If you have Docker installed and running, you can simply run `npm run env:start` to spin up a local environment with the plugin activated.
 
 # Todo
