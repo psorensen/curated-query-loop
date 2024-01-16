@@ -11,7 +11,7 @@ https://www.loom.com/share/fcdc9c2985b14bab82f05e55d83eecb7?sid=83412e99-f86f-4b
 
 ## Caveats
 
-1. Like the standard Query Loop block, this is limited to one post type - the post type in the search results will be determined by the post type selected in the Query Loop settings.
+1. Like the standard Query Loop block, this is limited to one post type - the post type in the curation search results will be determined by the post type selected in the Query Loop settings.
 2. Posts are not backfilled - this uses the `post__in` WP_Query parameter, meaning any posts_per_page argument exceeding the number of selected posts will be ignored. Posts will be limited to the specific posts selected.
 
 ## Installation
