@@ -50,7 +50,7 @@ class QueryModifications extends Module {
 					'query_loop_block_query_vars',
 					function ( $query_args ) use ( $ids ) {
 						$query_args['post__in'] = $ids;
-						$query_args['order_by'] = 'post__in';
+						$query_args['orderby'] = 'post__in';
 
 						return $query_args;
 					}
