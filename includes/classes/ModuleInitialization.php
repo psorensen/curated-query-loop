@@ -58,7 +58,7 @@ class ModuleInitialization {
 	protected function get_classes() {
 		$class_finder = new ClassFinder();
 		$class_finder::setAppRoot( CQL_PATH );
-		return $class_finder::getClassesInNamespace( 'CuratedQueryLoop', ClassFinder::RECURSIVE_MODE );
+		return $class_finder::getClassesInNamespace( __NAMESPACE__, ClassFinder::RECURSIVE_MODE );
 	}
 
 	/**
@@ -87,7 +87,7 @@ class ModuleInitialization {
 			}
 
 			// Make sure the class is a subclass of Module, so we can initialize it.
-			if ( ! $reflection_class->isSubclassOf( '\CuratedQueryLoop\Module' ) ) {
+			if ( ! $reflection_class->isSubclassOf( Module::class ) ) {
 				continue;
 			}
 

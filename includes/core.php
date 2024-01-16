@@ -19,7 +19,7 @@ use CuratedQueryLoop\Utility;
  */
 function setup() {
 	$n = function( $function ) {
-		return __NAMESPACE__ . "\\$function";
+		return __NAMESPACE__ . "\\{$function}";
 	};
 
 	add_action( 'init', $n( 'i18n' ) );
@@ -197,8 +197,8 @@ function script_loader_tag( $tag, $handle ) {
 	}
 
 	// Add the attribute if it hasn't already been added.
-	if ( ! preg_match( ":\s$script_execution(=|>|\s):", $tag ) ) {
-		$tag = preg_replace( ':(?=></script>):', " $script_execution", $tag, 1 );
+	if ( ! preg_match( ":\s{$script_execution}(=|>|\s):", $tag ) ) {
+		$tag = preg_replace( ':(?=></script>):', " {$script_execution}", $tag, 1 );
 	}
 
 	return $tag;
