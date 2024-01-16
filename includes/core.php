@@ -8,7 +8,7 @@
 namespace CuratedQueryLoop\Core;
 
 use CuratedQueryLoop\ModuleInitialization;
-use \WP_Error;
+use WP_Error;
 use CuratedQueryLoop\Utility;
 
 
