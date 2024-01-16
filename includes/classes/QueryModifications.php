@@ -62,10 +62,12 @@ class QueryModifications extends Module {
 	}
 
 	private function get_ids_from_content_picker( $posts ) {
-		$ids = [];
-		foreach ( $posts as $post ) {
-			$ids[] = $post['id'];
-		}
-		return $ids;
+		return array_reduce(
+			$posts,
+			function ( $ids, $post ) {
+				$ids[] = $post['id'];
+			},
+			[]
+		);
 	}
 }
