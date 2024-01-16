@@ -66,6 +66,7 @@ class QueryModifications extends Module {
 			$posts,
 			function ( $ids, $post ) {
 				$ids[] = $post['id'];
+				return $ids;
 			},
 			[]
 		);
