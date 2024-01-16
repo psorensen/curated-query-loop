@@ -34,8 +34,8 @@ require_once CQL_INC . '/utility.php';
 require_once CQL_INC . '/core.php';
 
 // Activation/Deactivation.
-register_activation_hook( __FILE__, '\CuratedQueryLoop\Core\activate' );
-register_deactivation_hook( __FILE__, '\CuratedQueryLoop\Core\deactivate' );
+register_activation_hook( __FILE__, 'CuratedQueryLoop\\Core\\activate' );
+register_deactivation_hook( __FILE__, 'CuratedQueryLoop\\Core\\deactivate' );
 
 // Bootstrap.
 CuratedQueryLoop\Core\setup();
