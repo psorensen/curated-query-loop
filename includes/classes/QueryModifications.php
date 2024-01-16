@@ -43,9 +43,9 @@ class QueryModifications extends Module {
 
 			$ids = isset( $block['attrs']['selectedPosts'] )
 				? $this->get_ids_from_content_picker( $block['attrs']['selectedPosts'] )
-				: false;
+				: [];
 
-			if ( true ) {
+			if ( $ids !== [] ) {
 				add_filter(
 					'query_loop_block_query_vars',
 					function ( $query_args ) use ( $ids ) {
