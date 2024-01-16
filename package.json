@@ -1,0 +1,43 @@
+{
+  "name": "curated-query-loop",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "10up-toolkit watch --port=5010 --hot",
+    "build": "10up-toolkit build",
+    "format-js": "10up-toolkit format-js",
+    "lint-js": "10up-toolkit lint-js",
+    "lint-style": "10up-toolkit lint-style",
+    "test": "10up-toolkit test-unit-jest",
+    "clean-dist": "rm -rf ./dist",
+    "cypress:open": "cypress open --config-file tests/cypress/config.js --e2e --browser chrome",
+    "cypress:run": "cypress run --headed --config-file tests/cypress/config.js",
+    "env": "wp-env",
+    "env:start": "wp-env start",
+    "env:stop": "wp-env stop",
+    "env:destroy": "wp-env destroy",
+    "postenv:start": "./tests/bin/initialize.sh"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@10up/cypress-wp-utils": "^0.2.0",
+    "@wordpress/env": "^9.0.0",
+    "10up-toolkit": "6.0.0-next.0",
+    "cypress": "^13.6.2"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "@10up/block-components": "^1.17.3",
+    "prop-types": "^15.7.2"
+  },
+  "10up-toolkit": {
+    "devUrl": "http://query-loop-picker.local",
+    "entry": {
+      "admin": "./assets/js/admin/admin.js",
+      "frontend": "./assets/js/frontend/frontend.js",
+      "shared": "./assets/js/shared/shared.js"
+    }
+  }
+}

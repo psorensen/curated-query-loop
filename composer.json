@@ -1,0 +1,28 @@
+{
+  "name": "10up/wp-plugin",
+  "type": "wordpress-plugin",
+  "authors": [
+    {
+      "name": "10up",
+      "email": "info@10up.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "haydenpierce/class-finder": "^0.4.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "CuratedQueryLoop\\": "includes/classes/"
+    },
+    "files": []
+  },
+  "require-dev": {
+    "10up/phpcs-composer": "^3.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}
