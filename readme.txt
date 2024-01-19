@@ -1,4 +1,4 @@
-=== Simple Podcasting ===
+=== Curated Query Loop ===
 Contributors:      psorensen
 Tags:              query loop, block
 Requires at least: 6.3
