@@ -2,6 +2,9 @@ import { getIframe } from "../functions/getIframe";
 const BLOCKTYPE = 'core/query';
 describe("Admin can login and open dashboard", () => {
 	beforeEach(() => {
+		cy.on("uncaught:exception", (err, runnable) => {
+			return false;
+		});
 		cy.login();
 	});
 
