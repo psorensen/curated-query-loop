@@ -1,16 +1,19 @@
-/**
- * WordPress Dependencies
- */
 import { createHigherOrderComponent } from '@wordpress/compose';
 import { addFilter } from '@wordpress/hooks';
 import { Placeholder } from '@wordpress/components';
 import { loop } from '@wordpress/icons';
 import { __ } from '@wordpress/i18n';
+import classnames from 'classnames';
 
 /**
- * External Dependencies
+ * This file is responsible for displaying a placeholder when no posts
+ * are selected in a Curated Query Loop.
+ *
+ * By default, the core Query block displays a "No Results Found" message,
+ * however this is a bit confusing for users since they have not yet selected
+ * any posts to display. This file also adds a class when the selectedPosts attribute
+ * is empty in order to hide the confusing message.
  */
-import classnames from 'classnames';
 
 /**
  * Display a placeholder when no posts are selected in a Curated Query Loop.
@@ -57,7 +60,7 @@ const withGettingStartedPlaceholder = createHigherOrderComponent((BlockEdit) => 
  *
  * Used to hide the core block's "No Results Found" message.
  */
-const withClientIdClassName = createHigherOrderComponent((BlockListBlock) => {
+const withNoPostsClass = createHigherOrderComponent((BlockListBlock) => {
 	return (props) => {
 		const { name, attributes, className } = props;
 		const { namespace } = attributes;
@@ -71,7 +74,7 @@ const withClientIdClassName = createHigherOrderComponent((BlockListBlock) => {
 		});
 		return <BlockListBlock {...props} className={cn} />;
 	};
-}, 'withClientIdClassName');
+}, 'withNoPostsClass');
 
 addFilter(
 	'editor.BlockEdit',
@@ -79,8 +82,4 @@ addFilter(
 	withGettingStartedPlaceholder,
 );
 
-addFilter(
-	'editor.BlockListBlock',
-	'curated-query-loop/empty-posts-classname',
-	withClientIdClassName,
-);
+addFilter('editor.BlockListBlock', 'curated-query-loop/empty-posts-classname', withNoPostsClass);

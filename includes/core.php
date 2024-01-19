@@ -148,7 +148,7 @@ function style_url( $stylesheet, $context ) {
 		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in CuratedQueryLoop stylesheet loader.' );
 	}
 
-	return CQL_URL . "dist/css/${stylesheet}.css";
+	return CQL_URL . "dist/css/{$stylesheet}.css";
 
 }
 

@@ -34,7 +34,7 @@
     "prop-types": "^15.7.2"
   },
   "10up-toolkit": {
-    "devUrl": "http://query-loop-picker.local",
+    "devUrl": "http://localhost:8888",
     "entry": {
       "admin": "./assets/js/admin/admin.js",
       "frontend": "./assets/js/frontend/frontend.js",

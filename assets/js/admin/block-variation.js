@@ -22,8 +22,13 @@ registerBlockVariation('core/query', {
 	innerBlocks: [
 		[
 			'core/post-template',
-			{},
-			[['core/post-title'], ['core/post-featured-image'], ['core/post-excerpt']],
+			{
+				layout: {
+					type: 'grid',
+					columns: 3,
+				},
+			},
+			[['core/post-featured-image'], ['core/post-title'], ['core/post-excerpt']],
 		],
 	],
 	scope: ['inserter'],
