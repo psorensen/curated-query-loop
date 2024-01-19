@@ -24,9 +24,14 @@ describe("Admin can login and open dashboard", () => {
 		cy.contains('Curated Query Loop').click();
 		cy.get('.edit-post-header-toolbar__inserter-toggle').click();
 		// Assert that the block variation is inserted successfully and has approporiate class
-		cy.get('body').then(() => {
-			const iframe = getIframe('iframe[name="editor-canvas"]')
-			iframe.find(`.wp-block[data-type="${BLOCKTYPE}"].has-no-posts`)
+
+		cy.get('body').then($body => {
+			if ($body.find('iframe[name="editor-canvas"]').length) {
+				const iframe = getIframe('iframe[name="editor-canvas"]')
+				iframe.find(`.wp-block[data-type="${BLOCKTYPE}"].has-no-posts`)
+			} else {
+				cy.get(`.wp-block[data-type="${BLOCKTYPE}"].has-no-posts`)
+			}
 		});
 
 		// Curate a post
@@ -35,12 +40,19 @@ describe("Admin can login and open dashboard", () => {
 		cy.get('.block-editor-link-control__search-item').first().click()
 
 		cy.get('body').then($body => {
-			const iframe = getIframe('iframe[name="editor-canvas"]')
-			iframe
-				.find(`.wp-block[data-type="${BLOCKTYPE}"]`)
-				.should('not.have.class', 'has-no-posts')
-				.find('h2')
-				.should('contain', 'Hello world!')
+			if ($body.find('iframe[name="editor-canvas"]').length) {
+				const iframe = getIframe('iframe[name="editor-canvas"]')
+				iframe
+					.find(`.wp-block[data-type="${BLOCKTYPE}"]`)
+					.should('not.have.class', 'has-no-posts')
+					.find('h2')
+					.should('contain', 'Hello world!')
+			} else {
+				cy.get(`.wp-block[data-type="${BLOCKTYPE}"]`)
+					.should('not.have.class', 'has-no-posts')
+					.find('h2')
+					.should('contain', 'Hello world!')
+			}
 		});
 	});
 });
