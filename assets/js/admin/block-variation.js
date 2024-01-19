@@ -8,7 +8,7 @@ registerBlockVariation('core/query', {
 	isActive: ['namespace'],
 	description: __(
 		'A variation of the Query Loop that allows for curating specific posts',
-		'query-loop-post-picker',
+		'curated-query-loop',
 	),
 	attributes: {
 		namespace: NAMESPACE,

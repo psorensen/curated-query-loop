@@ -1,1 +1,1 @@
-export const NAMESPACE = 'curated-query-loop';
+export const NAMESPACE = 'curated-query-loops';

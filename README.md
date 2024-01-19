@@ -9,7 +9,7 @@ https://www.loom.com/share/fcdc9c2985b14bab82f05e55d83eecb7?sid=83412e99-f86f-4b
 ## Screenshots
 
 ![image](https://github.com/psorensen/curated-query-loop/assets/6152801/5d12e0d4-41bf-4eb2-b7c3-3e5852aea57e)
-![image](https://github.com/psorensen/query-loop-post-picker/assets/6152801/944fcdda-9cc2-48b6-b585-f94f81c45093)
+![image](https://github.com/psorensen/curated-query-loop/assets/6152801/944fcdda-9cc2-48b6-b585-f94f81c45093)
 
 ## Caveats
 
