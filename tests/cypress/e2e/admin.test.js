@@ -14,8 +14,8 @@ describe("Admin can login and open dashboard", () => {
 	});
 
 	it("Activate Curated Query Loop and deactivate it back", () => {
-		cy.deactivatePlugin("query-loop-post-picker");
-		cy.activatePlugin("query-loop-post-picker");
+		cy.deactivatePlugin("curated-query-loop");
+		cy.activatePlugin("curated-query-loop");
 	});
 
 	it("Create new post, add Curated Query Loop and add a post", () => {
