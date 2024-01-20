@@ -1,5 +1,7 @@
 # Curated Query Loop
 
+[![E2E test](https://github.com/psorensen/curated-query-loop/actions/workflows/cypress.yml/badge.svg)](https://github.com/psorensen/curated-query-loop/actions/workflows/cypress.yml)
+
 The WordPress Query Loop Block is a powerful block, enabling authors to curate blog content with fine-grained control over the layout. However, it's often a requirement that site editors want to pick the specific posts that appear in these content grids and lists. This WordPress plugin adds a block variation of the Query Loop which provides a content picker, allowing editors to choose the exact posts they want to display, while still leveraging the power of the layout control which comes with the Query Loop Block. 
 
 ## Demo
