@@ -42,4 +42,4 @@ jobs:
       if: failure()
       with:
         name: cypress-screenshots
-        path: cypress/screenshots
+        path: tests/cypress/screenshots
