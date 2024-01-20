@@ -36,7 +36,7 @@ describe("Admin can login and open dashboard", () => {
 
 		// Curate a post
 		cy.openDocumentSettingsSidebar('Block')
-		cy.get('.tenup-content-picker input').type('Hello World')
+		cy.get('.tenup-content-picker input').type('Et sit perspiciatis architecto consequatur sit')
 		cy.get('.block-editor-link-control__search-item').first().click()
 
 		cy.get('body').then($body => {
@@ -46,12 +46,12 @@ describe("Admin can login and open dashboard", () => {
 					.find(`.wp-block[data-type="${BLOCKTYPE}"]`)
 					.should('not.have.class', 'has-no-posts')
 					.find('h2')
-					.should('contain', 'Hello world!')
+					.should('contain', 'Et sit perspiciatis architecto consequatur sit')
 			} else {
 				cy.get(`.wp-block[data-type="${BLOCKTYPE}"]`)
 					.should('not.have.class', 'has-no-posts')
 					.find('h2')
-					.should('contain', 'Hello world!')
+					.should('contain', 'Et sit perspiciatis architecto consequatur sit')
 			}
 		});
 	});

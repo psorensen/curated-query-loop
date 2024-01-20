@@ -3,11 +3,19 @@
     "config": {
         "SCRIPT_DEBUG": true
     },
+    "mappings": {
+        ".htaccess": "./.wp-env/.htaccess",
+        "wp-content/uploads/data": "./.wp-env/data"
+    },
     "env": {
         "tests": {
             "config": {
                 "SCRIPT_DEBUG": true
-            }
+            },
+            "mappings": {
+				".htaccess": "./.wp-env/.htaccess",
+				"wp-content/uploads/data": "./.wp-env/data"
+			}
         }
     }
 }
