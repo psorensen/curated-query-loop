@@ -1,0 +1,26 @@
+# Directories
+/.git
+/.github
+/.husky
+/.wordpress-org
+/assets
+/gulp-tasks
+/node_modules
+/tests
+/vendor
+
+# Files
+.*
+/CHANGELOG.md
+/CODE_OF_CONDUCT.md
+/composer.json
+/composer.lock
+/CONTRIBUTING.md
+/CREDITS.md
+/gulpfile.babel.js
+/LICENSE.md
+/package.json
+/package-lock.json
+/phpunit.xml.dist
+/README.md
+/webpack.config.js
