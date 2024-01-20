@@ -37,9 +37,13 @@ jobs:
       run: npm run env:start
     - name: Test
       run: npm run cypress:run
-    - name: Upload screenshots
+    - name: Make artifacts available
       uses: actions/upload-artifact@v3
       if: failure()
       with:
-        name: cypress-screenshots
-        path: tests/cypress/screenshots
+        name: cypress-artifact
+        retention-days: 2
+        path: |
+          ${{ github.workspace }}/tests/cypress/screenshots/
+          ${{ github.workspace }}/tests/cypress/videos/
+          ${{ github.workspace }}/tests/cypress/logs/
