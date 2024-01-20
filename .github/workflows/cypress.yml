@@ -6,7 +6,7 @@ on:
     - main
   pull_request:
     branches:
-    - develop
+      - main
 jobs:
   cypress:
     name: ${{ matrix.job_name }}
@@ -17,7 +17,7 @@ jobs:
         - job_name: 'WP latest'
           core_version: 'latest'
         - job_name: 'WP minimum'
-          core_version: 'WordPress/WordPress#5.7'
+          core_version: 'WordPress/WordPress#6.3'
         - job_name: 'WP trunk'
           core_version: 'WordPress/WordPress#master'
     steps:

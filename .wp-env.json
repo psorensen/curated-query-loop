@@ -1,3 +1,13 @@
 {
-    "plugins": ["."]
+    "plugins": ["."],
+    "config": {
+        "SCRIPT_DEBUG": true
+    },
+    "env": {
+        "tests": {
+            "config": {
+                "SCRIPT_DEBUG": true
+            }
+        }
+    }
 }

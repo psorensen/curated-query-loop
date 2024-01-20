@@ -8,7 +8,7 @@ registerBlockVariation('core/query', {
 	isActive: ['namespace'],
 	description: __(
 		'A variation of the Query Loop that allows for curating specific posts',
-		'query-loop-post-picker',
+		'curated-query-loop',
 	),
 	attributes: {
 		namespace: NAMESPACE,
@@ -22,8 +22,13 @@ registerBlockVariation('core/query', {
 	innerBlocks: [
 		[
 			'core/post-template',
-			{},
-			[['core/post-title'], ['core/post-featured-image'], ['core/post-excerpt']],
+			{
+				layout: {
+					type: 'grid',
+					columns: 3,
+				},
+			},
+			[['core/post-featured-image'], ['core/post-title'], ['core/post-excerpt']],
 		],
 	],
 	scope: ['inserter'],

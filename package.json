@@ -10,11 +10,12 @@
     "lint-style": "10up-toolkit lint-style",
     "test": "10up-toolkit test-unit-jest",
     "clean-dist": "rm -rf ./dist",
-    "cypress:open": "cypress open --config-file tests/cypress/config.js --e2e --browser chrome",
+    "cypress:open": "cypress open --config-file tests/cypress/config.js --e2e --browser electron",
     "cypress:run": "cypress run --headed --config-file tests/cypress/config.js",
     "env": "wp-env",
     "env:start": "wp-env start",
     "env:stop": "wp-env stop",
+    "env:restart": "wp-env stop && wp-env start",
     "env:destroy": "wp-env destroy",
     "postenv:start": "./tests/bin/initialize.sh"
   },
@@ -23,17 +24,17 @@
   },
   "devDependencies": {
     "@10up/cypress-wp-utils": "^0.2.0",
-    "@wordpress/env": "^9.0.0",
+    "@wordpress/env": "^9.1.0",
     "10up-toolkit": "6.0.0-next.0",
-    "cypress": "^13.6.2"
+    "cypress": "^13.6.3"
   },
   "dependencies": {
-    "classnames": "^2.5.1",
     "@10up/block-components": "^1.17.3",
+    "classnames": "^2.5.1",
     "prop-types": "^15.7.2"
   },
   "10up-toolkit": {
-    "devUrl": "http://query-loop-picker.local",
+    "devUrl": "http://localhost:8888",
     "entry": {
       "admin": "./assets/js/admin/admin.js",
       "frontend": "./assets/js/frontend/frontend.js",

@@ -22,14 +22,10 @@ const BlockEdit = (props) => {
 
 	return (
 		<InspectorControls>
-			<PanelBody
-				title={__('Query Curation', 'query-loop-post-picker')}
-				initialOpen
-				instructions="asdasdf"
-			>
+			<PanelBody title={__('Query Curation', 'curated-query-loop')} initialOpen>
 				<ContentPicker
 					mode="post"
-					label={__(`Search for a ${query.postType}`, 'query-loop-post-picker')}
+					label={__(`Search for a ${query.postType}`, 'curated-query-loop')}
 					contentTypes={[query.postType]}
 					maxContentItems={10}
 					isOrderable

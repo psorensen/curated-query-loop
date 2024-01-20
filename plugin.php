@@ -1,10 +1,12 @@
 <?php
 /** 
- * Plugin Name: Query Loop Post Picker
+ * Plugin Name: Curated Query Loop
  * Plugin URI:
- * Description: Adds a post-picker to the query loop
+ * Description: Adds a post-picker to the Query Loop block.
  * Version: 0.1.0
  * Author: 10up
+ * Mimimum WP Version: 6.3
+ * Tested WP Version: 6.3
  */
 
 // Useful global constants.
@@ -34,8 +36,8 @@ require_once CQL_INC . '/utility.php';
 require_once CQL_INC . '/core.php';
 
 // Activation/Deactivation.
-register_activation_hook( __FILE__, '\CuratedQueryLoop\Core\activate' );
-register_deactivation_hook( __FILE__, '\CuratedQueryLoop\Core\deactivate' );
+register_activation_hook( __FILE__, 'CuratedQueryLoop\\Core\\activate' );
+register_deactivation_hook( __FILE__, 'CuratedQueryLoop\\Core\\deactivate' );
 
 // Bootstrap.
 CuratedQueryLoop\Core\setup();
