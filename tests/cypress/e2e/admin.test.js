@@ -5,6 +5,15 @@ describe("Admin can login and open dashboard", () => {
 		cy.on("uncaught:exception", (err, runnable) => {
 			return false;
 		});
+
+		cy.visit(`/wp-admin`);
+		// if page contains "Update WordPress Database" button, click it
+		cy.get(".button").then(($btn) => {
+			if ($btn.text().includes("Update WordPress Database")) {
+				cy.get(".button").click();
+			}
+		});
+
 		cy.login();
 	});
 
