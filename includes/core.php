@@ -130,7 +130,7 @@ function script_url( $script, $context ) {
 		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in CuratedQueryLoop script loader.' );
 	}
 
-	return CQL_URL . "dist/js/${script}.js";
+	return CQL_URL . "dist/js/{$script}.js";
 
 }
 
