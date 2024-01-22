@@ -3,6 +3,7 @@
 /.github
 /.husky
 /.wordpress-org
+/.wp-env
 /assets
 /gulp-tasks
 /node_modules
