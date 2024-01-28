@@ -29,7 +29,7 @@
     "cypress": "^13.6.3"
   },
   "dependencies": {
-    "@10up/block-components": "^1.17.3",
+    "@10up/block-components": "^1.17.4",
     "classnames": "^2.5.1",
     "prop-types": "^15.7.2"
   },
