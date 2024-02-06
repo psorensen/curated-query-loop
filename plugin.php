@@ -1,12 +1,13 @@
 <?php
 /** 
- * Plugin Name: Curated Query Loop
- * Plugin URI:
- * Description: Adds a post-picker to the Query Loop block.
- * Version: 0.1.0
- * Author: 10up
+ * Plugin Name:       Curated Query Loop
+ * Description:       Adds a post-picker to the Query Loop block.
+ * Version:           0.1.0
+ * Author:            Peter Sorensen, 10up
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Mimimum WP Version: 6.3
- * Tested WP Version: 6.3
+ * Tested WP Version:  6.4
  */
 
 // Useful global constants.
