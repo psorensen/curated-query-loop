@@ -57,7 +57,7 @@ class ModuleInitialization {
 	 */
 	protected function get_classes() {
 		$class_finder = new ClassFinder();
-		$class_finder::setAppRoot( CQL_PATH );
+		$class_finder::setAppRoot( CURARTED_QUERY_LOOP_PATH );
 		return $class_finder::getClassesInNamespace( __NAMESPACE__, ClassFinder::RECURSIVE_MODE );
 	}
 

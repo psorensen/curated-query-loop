@@ -41,7 +41,7 @@ function setup() {
 function i18n() {
 	$locale = apply_filters( 'plugin_locale', get_locale(), 'curated-query-loop' );
 	load_textdomain( 'curated-query-loop', WP_LANG_DIR . '/curated-query-loop/curated-query-loop-' . $locale . '.mo' );
-	load_plugin_textdomain( 'curated-query-loop', false, plugin_basename( CQL_PATH ) . '/languages/' );
+	load_plugin_textdomain( 'curated-query-loop', false, plugin_basename( CURARTED_QUERY_LOOP_PATH ) . '/languages/' );
 }
 
 /**
@@ -53,13 +53,13 @@ function init() {
 	do_action( 'curated-query-loop_before_init' );
 
 	// If the composer.json isn't found, trigger a warning.
-	if ( ! file_exists( CQL_PATH . 'composer.json' ) ) {
+	if ( ! file_exists( CURARTED_QUERY_LOOP_PATH . 'composer.json' ) ) {
 		add_action(
 			'admin_notices',
 			function() {
 				$class = 'notice notice-error';
 				/* translators: %s: the path to the plugin */
-				$message = sprintf( __( 'The composer.json file was not found within %s. No classes will be loaded.', 'curated-query-loop' ), CQL_PATH );
+				$message = sprintf( __( 'The composer.json file was not found within %s. No classes will be loaded.', 'curated-query-loop' ), CURARTED_QUERY_LOOP_PATH );
 
 				printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 			}
@@ -130,7 +130,7 @@ function script_url( $script, $context ) {
 		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in CuratedQueryLoop script loader.' );
 	}
 
-	return CQL_URL . "dist/js/{$script}.js";
+	return CURARTED_QUERY_LOOP_URL . "dist/js/{$script}.js";
 
 }
 
@@ -148,7 +148,7 @@ function style_url( $stylesheet, $context ) {
 		return new WP_Error( 'invalid_enqueue_context', 'Invalid $context specified in CuratedQueryLoop stylesheet loader.' );
 	}
 
-	return CQL_URL . "dist/css/{$stylesheet}.css";
+	return CURARTED_QUERY_LOOP_URL . "dist/css/{$stylesheet}.css";
 
 }
 
