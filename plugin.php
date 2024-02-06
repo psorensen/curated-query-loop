@@ -10,6 +10,8 @@
  * Tested WP Version:  6.4
  */
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Useful global constants.
 define( 'CQL_VERSION', '0.1.0' );
 define( 'CQL_URL', plugin_dir_url( __FILE__ ) );
