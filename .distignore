@@ -13,7 +13,6 @@
 .*
 /CHANGELOG.md
 /CODE_OF_CONDUCT.md
-/composer.json
 /composer.lock
 /CONTRIBUTING.md
 /CREDITS.md
