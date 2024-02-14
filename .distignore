@@ -8,7 +8,6 @@
 /gulp-tasks
 /node_modules
 /tests
-/vendor
 
 # Files
 .*
