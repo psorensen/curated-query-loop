@@ -14,10 +14,10 @@ This plugin extends the core Query Loop block, and as such
 2. Posts are not backfilled - this uses the `post__in` WP_Query parameter, meaning any posts_per_page argument exceeding the number of selected posts will be ignored. Posts will be limited to the specific posts selected.
 
 ## Installation
-Currently, compiled assets are not included and must be manually built.
+Visit https://wordpress.org/plugins/curated-query-loop/ to download the plugin.
+
+## Development
 1. Clone this repository into `wp-content/plugins`
 2. Install composer dependencies with `composer install`
 3. Install NPM dependencies with `npm i` and build plugin using `npm run build`. Node 18+ recommended.
-
-## Development
-5. This ships with [`@wordpress/env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) installed. If you have Docker installed and running, you can simply run `npm run env:start` to spin up a local environment with the plugin activated.
+4. This ships with [`@wordpress/env`](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) installed. If you have Docker installed and running, you can simply run `npm run env:start` to spin up a local environment with the plugin activated.
