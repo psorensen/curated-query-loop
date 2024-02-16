@@ -2,7 +2,7 @@
 /** 
  * Plugin Name:       Curated Query Loop
  * Description:       Adds a post-picker to the Query Loop block.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            Peter Sorensen, 10up
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html

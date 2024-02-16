@@ -68,9 +68,9 @@ const withNoPostsClass = createHigherOrderComponent((BlockListBlock) => {
 			return <BlockListBlock {...props} />;
 		}
 		const { query } = attributes;
-		const { include = [] } = query;
+		const { include } = query;
 		const cn = classnames(className, {
-			'has-no-posts': include.length < 1,
+			'has-no-posts': include && include.length < 1,
 		});
 		return <BlockListBlock {...props} className={cn} />;
 	};
