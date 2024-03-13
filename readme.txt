@@ -1,10 +1,10 @@
 === Curated Query Loop ===
-Contributors:      psorensen
+Contributors:      psorensen, s3rgiosan
 Tags:              query loop, block
 Requires at least: 6.3
 Tested up to:      6.4
 Requires PHP:      7.4
-Stable tag:        0.1.1
+Stable tag:        0.1.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
