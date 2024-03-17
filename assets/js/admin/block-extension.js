@@ -27,7 +27,7 @@ const BlockEdit = (props) => {
 					mode="post"
 					label={__(`Search for a ${query.postType}`, 'curated-query-loop')}
 					contentTypes={[query.postType]}
-					maxContentItems={10}
+					maxContentItems={query.perPage || 10}
 					isOrderable
 					excludeCurrentPost={false}
 					content={selectedPosts}
