@@ -2,6 +2,7 @@ import { registerBlockExtension, ContentPicker } from '@10up/block-components';
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody } from '@wordpress/components';
+import { useEffect, useRef } from '@wordpress/element';
 import { NAMESPACE } from './namespace';
 
 const additionalAttributes = {
@@ -14,6 +15,29 @@ const additionalAttributes = {
 const BlockEdit = (props) => {
 	const { attributes, setAttributes } = props;
 	const { selectedPosts, query, namespace } = attributes;
+
+	const previousPostTypeRef = useRef(query.postType);
+
+	useEffect(() => {
+		if (query.postType !== previousPostTypeRef.current) {
+			const newAttributes = { ...attributes };
+
+			if (newAttributes.query && newAttributes.query.include) {
+				delete newAttributes.query.include;
+			}
+
+			newAttributes.selectedPosts = [];
+			newAttributes.query = {
+				...newAttributes.query,
+				orderBy: 'date',
+				perPage: newAttributes.query.perPage,
+			};
+
+			setAttributes(newAttributes);
+
+			previousPostTypeRef.current = query.postType;
+		}
+	}, [query.postType, setAttributes, attributes]);
 
 	// only allow this block extension to be used on the block variation
 	if (namespace !== NAMESPACE) {
