@@ -31,5 +31,5 @@ registerBlockVariation('core/query', {
 			[['core/post-featured-image'], ['core/post-title'], ['core/post-excerpt']],
 		],
 	],
-	scope: ['inserter'],
+	scope: ['inserter', 'transform'],
 });
