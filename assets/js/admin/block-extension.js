@@ -31,6 +31,7 @@ const BlockEdit = (props) => {
 				...newAttributes.query,
 				orderBy: 'date',
 				perPage: newAttributes.query.perPage,
+				include: [],
 			};
 
 			setAttributes(newAttributes);
