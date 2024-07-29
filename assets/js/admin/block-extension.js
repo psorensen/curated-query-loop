@@ -63,7 +63,6 @@ const BlockEdit = (props) => {
 								...query,
 								include: pickedContent.map((post) => post.id),
 								orderBy: pickedContent.length > 0 ? 'include' : 'date',
-								perPage: pickedContent.length,
 								offset: 0,
 							},
 						});
