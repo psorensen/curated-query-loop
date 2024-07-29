@@ -2,7 +2,7 @@
 /** 
  * Plugin Name:       Curated Query Loop
  * Description:       Adds a post-picker to the Query Loop block.
- * Version:           0.1.3
+ * Version:           0.1.4
  * Author:            Peter Sorensen, 10up
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Useful global constants.
-define( 'CURARTED_QUERY_LOOP_VERSION', '0.1.2' );
+define( 'CURARTED_QUERY_LOOP_VERSION', '0.1.4' );
 define( 'CURARTED_QUERY_LOOP_URL', plugin_dir_url( __FILE__ ) );
 define( 'CURARTED_QUERY_LOOP_PATH', plugin_dir_path( __FILE__ ) );
 define( 'CURARTED_QUERY_LOOP_INC', CURARTED_QUERY_LOOP_PATH . 'includes/' );
