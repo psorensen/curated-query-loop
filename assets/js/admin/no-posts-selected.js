@@ -1,7 +1,7 @@
 import { createHigherOrderComponent } from '@wordpress/compose';
 import { addFilter } from '@wordpress/hooks';
 import { Placeholder } from '@wordpress/components';
-import { loop } from '@wordpress/icons';
+import { postList as icon } from '@wordpress/icons';
 import { __ } from '@wordpress/i18n';
 import classnames from 'classnames';
 
@@ -43,7 +43,7 @@ const withGettingStartedPlaceholder = createHigherOrderComponent((BlockEdit) => 
 			<>
 				<BlockEdit {...props} />
 				<Placeholder
-					icon={loop}
+					icon={icon}
 					label={__('Curated Query Loop', 'curated-query-loop')}
 					instructions={__(
 						'Get started by selecting some posts from the righthand sidebar.',
