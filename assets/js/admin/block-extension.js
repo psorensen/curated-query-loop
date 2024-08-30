@@ -19,7 +19,7 @@ const BlockEdit = (props) => {
 	const previousPostTypeRef = useRef(query.postType);
 
 	useEffect(() => {
-		if (query.postType !== previousPostTypeRef.current) {
+		if (query.postType !== previousPostTypeRef.current && namespace === NAMESPACE) {
 			const newAttributes = { ...attributes };
 
 			if (newAttributes.query && newAttributes.query.include) {
@@ -38,7 +38,7 @@ const BlockEdit = (props) => {
 
 			previousPostTypeRef.current = query.postType;
 		}
-	}, [query.postType, setAttributes, attributes]);
+	}, [query.postType, setAttributes, attributes, namespace]);
 
 	// only allow this block extension to be used on the block variation
 	if (namespace !== NAMESPACE) {
