@@ -14,8 +14,12 @@ jobs:
     strategy:
       matrix:
         include:
-        - job_name: 'WP latest'
+        - job_name: 'WP latest (7.1)'
           core_version: 'latest'
+        - job_name: 'WP 7.0'
+          core_version: 'WordPress/WordPress#7.0'
+        - job_name: 'WP 6.9'
+          core_version: 'WordPress/WordPress#6.9'
         - job_name: 'WP minimum'
           core_version: 'WordPress/WordPress#6.3'
         - job_name: 'WP trunk'
