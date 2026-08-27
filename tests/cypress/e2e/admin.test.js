@@ -29,9 +29,9 @@ describe("Admin can login and open dashboard", () => {
 
 	it("Create new post, add Curated Query Loop and add a post", () => {
 		cy.createPost({});
-		cy.get('.edit-post-header-toolbar__inserter-toggle').click();
+		cy.get('.edit-post-header-toolbar__inserter-toggle, .editor-document-tools__inserter-toggle').click();
 		cy.contains('Curated Query Loop').click();
-		cy.get('.edit-post-header-toolbar__inserter-toggle').click();
+		cy.get('.edit-post-header-toolbar__inserter-toggle, .editor-document-tools__inserter-toggle').click();
 		// Assert that the block variation is inserted successfully and has approporiate class
 
 		cy.get('body').then($body => {
