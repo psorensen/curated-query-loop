@@ -12,6 +12,7 @@ jobs:
     name: ${{ matrix.job_name }}
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         include:
         - job_name: 'WP latest (7.1)'
@@ -42,10 +43,10 @@ jobs:
     - name: Test
       run: npm run cypress:run
     - name: Make artifacts available
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: failure()
       with:
-        name: cypress-artifact
+        name: cypress-artifact-${{ matrix.job_name }}
         retention-days: 2
         path: |
           ${{ github.workspace }}/tests/cypress/screenshots/
