@@ -46,7 +46,7 @@ describe("Admin can login and open dashboard", () => {
 		// Curate a post
 		cy.openDocumentSettingsSidebar('Block')
 		cy.get('.tenup-content-picker input').type('Reprehenderit tempore')
-		cy.get('.block-editor-link-control__search-item').first().click()
+		cy.get('.tenup-content-search-list-item').first().click()
 
 		cy.get('body').then($body => {
 			if ($body.find('iframe[name="editor-canvas"]').length) {
