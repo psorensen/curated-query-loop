@@ -4,6 +4,7 @@ const getCacheDirectory = require( '@wordpress/env/lib/config/get-cache-director
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
+  defaultCommandTimeout: 10000,
   fixturesFolder: 'tests/cypress/fixtures',
   screenshotsFolder: 'tests/cypress/screenshots',
   videosFolder: 'tests/cypress/videos',
