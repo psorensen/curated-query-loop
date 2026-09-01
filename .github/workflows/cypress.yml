@@ -11,12 +11,18 @@ jobs:
   cypress:
     name: ${{ matrix.job_name }}
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.allow_failure || false }}
     strategy:
       fail-fast: false
       matrix:
         include:
+        # WP 7.1 made the post editor canvas always-iframed (blob: URL), which
+        # @10up/cypress-wp-utils's getIframe() helper doesn't handle correctly yet.
+        # See https://make.wordpress.org/core/2026/08/03/iframed-editor-changes-in-wordpress-7-1/
+        # Kept non-blocking (but visible) until that's sorted upstream.
         - job_name: 'WP latest (7.1)'
           core_version: 'latest'
+          allow_failure: true
         - job_name: 'WP 7.0'
           core_version: 'WordPress/WordPress#7.0'
         - job_name: 'WP 6.9'
@@ -25,6 +31,7 @@ jobs:
           core_version: 'WordPress/WordPress#6.3'
         - job_name: 'WP trunk'
           core_version: 'WordPress/WordPress#master'
+          allow_failure: true
     steps:
     - name: Checkout
       uses: actions/checkout@v4
